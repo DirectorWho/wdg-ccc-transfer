@@ -1,0 +1,34 @@
+// block css
+
+.sidebars .block {
+  margin-bottom: $vert-spacing;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.block-search {
+  clear: both;
+  overflow: hidden;
+  width: 100%;
+}
+
+@media all and (min-width: $tab) {
+
+  .block-search {
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    width: 30%;
+  }
+
+}
+
+@media all and (min-width: $desk) {
+
+    .block-search {
+      width: 20%;
+    }
+
+}
