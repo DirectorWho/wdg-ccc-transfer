@@ -35,13 +35,12 @@ input[type="search"],
 input[type="tel"] {
   background: $white;
   border: 1px solid $gray;
-  box-shadow: 0 0 2px $gray inset;
   color: $black;
   font-size: $base-font-size;
   height: 2.25rem;
   margin-bottom: .5rem;
   position: relative;
-  width: 80%;
+  width: 100%;
 }
 
 textarea {
@@ -88,12 +87,11 @@ input[type="password"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus {
   border: 1px solid $accent;
-  box-shadow: 0 0 2px $accent inset;
 }
 
 // Drupal's form field wrapper class
 .form-item {
-  margin-bottom: $vert-spacing * 1.5;
+  margin-bottom: $vert-spacing * .5;
   overflow: hidden;
 }
 

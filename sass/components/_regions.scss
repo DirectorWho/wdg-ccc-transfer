@@ -76,13 +76,33 @@ img.header__logo-image {
   }
 }
 
+.tech-support-button {
+  background: $gray;
+  padding: .5rem 1rem;
+  a {
+    width: 100%;
+  }
+}
+
 // postscript region
 
 
 // footer region
 
 footer {
+  background: $black;
   clear: both;
+  overflow: hidden;
+  padding: 1rem;
+  p,
+  li,
+  h4 {
+    color: $white;
+  }
+  p {
+    font-size: $base-font-size * .75;
+    margin-bottom: .5rem;
+  }
 }
 
 .region-footer {
@@ -94,5 +114,23 @@ footer {
   p {
     float: left;
     font-size: $base-font-size * .625;
+  }
+}
+
+@media all and (min-width: $tab) {
+
+  .disclaimer-left,
+  .disclaimer-right {
+    float: left;
+    margin-bottom: $vert-spacing;
+    width: 50%;
+  }
+
+  .disclaimer-left {
+    padding-right: 17px;
+  }
+
+  .disclaimer-right {
+    padding-left: 17px;
   }
 }
