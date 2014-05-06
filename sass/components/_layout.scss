@@ -16,9 +16,14 @@ $gutter: 35px;
 .region-menu,
 .region-branding {
   clear: both;
+  display: block;
   margin: 0 auto;
   max-width: $max-width;
   padding: 0 ($gutter / 2);
+}
+
+.region-menu {
+  padding: 0;
 }
 
 #content,
@@ -53,6 +58,10 @@ $gutter: 35px;
 
 
 @media all and (min-width: $desk) {
+
+  .region-menu{
+    padding: 0 ($gutter / 2);
+  }
 
 // two sidebars, one on either side of content
 .two-sidebars {
