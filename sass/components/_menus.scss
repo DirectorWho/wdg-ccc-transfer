@@ -1,7 +1,14 @@
 // menu styles
 
+ul li.leaf,
 ul li.leaf {
   list-style: none;
+}
+
+.menu li a {
+  display: block;
+  position: relative;
+  width: 100%;
 }
 
 li a.active {
@@ -14,37 +21,59 @@ li a.active:hover  {
 
 .region-menu .menu,
 .footer-menu.menu {
+  background: $black;
 	float: left;
-  padding: .5rem 0;
+  list-style: none;
   margin-bottom: 0;
+  margin-top: .325em;
+}
+
+.region-menu .menu {
+  max-height: 0;
+  overflow: hidden;
+  &.active {
+    max-height: 50em;
+  }
 }
 
 .footer-menu.menu {
   margin-bottom: $vert-spacing;
 }
 
-.region-menu .menu li,
-.footer-menu.menu li  {
-  display: inline-block;
-  font-size: $base-font-size * .75;
-  padding-right: 1.5em;
-  position: relative;
+// multi-toggle styles
+
+a.menu-link {
+  color: $white;
+  display: block;
+  float: left;
+  padding: .325em 0 0 17px;
 }
 
-@media all and (min-width: $tab) {
-
-  .region-menu .menu li,
-  .footer-menu.menu li  {
-    border-right: 1px solid lighten($black, 30%);
-    padding: 0 1em;
-    &.first {
-      padding-left: 0;
-    }
-    &.last {
-      border-right: none;
-    }
+.region-menu .menu {
+  clear: both;
+  width: 100%;
+  ul {
+    background: $black;
+    clear: both;
   }
+}
 
+.region-menu .menu li.menuparent > a:after {
+	content: '+';
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	font-size: 1.5em;
+	padding: 0.25em 0.5em;
+}
+
+.region-menu .menu li.menuparent > a.active:after {
+  content: "-";
+}
+
+.region-menu .menu li {
+  padding: .75em;
 }
 
 .region-menu .menu li a,
@@ -68,19 +97,96 @@ li a.active:hover  {
 
 .region-menu .menu li ul,
 .footer-menu.menu li ul  {
-  background: $base-color;
-  border: 1px solid lighten($base-color, 7%);
+  clear: both;
+  list-style: none;
   left: 20px;
-  top: 35px;
   opacity: 1;
+
+  top: 35px;
+  @include trans-all;
   li {
     padding: .75rem;
     border-bottom: 1px solid lighten($base-color, 7%);
+    list-style: none;
     &:last-child {
       border-bottom: none;
     }
   }
 }
+
+.region-menu .menu li ul {
+  max-height: 0;
+  overflow: hidden;
+  &.active {
+    max-height: 50em;
+  }
+}
+
+
+@media all and (min-width: $desk) {
+
+  .region-menu .menu,
+  .region-menu .menu li ul {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .region-menu .menu li.menuparent > a:after {
+    content: '';
+  }
+
+  .region-menu .menu li,
+  .footer-menu.menu li  {
+    border-right: 1px solid lighten($black, 30%);
+    padding: .5em 1em;
+    &.first {
+      padding-left: 0;
+    }
+    &.last {
+      border-right: none;
+    }
+  }
+
+  .region-menu .menu li,
+  .footer-menu.menu li  {
+    display: inline-block;
+    font-size: $base-font-size * .75;
+    position: relative;
+  }
+
+  a.menu-link {
+      display: none;
+  }
+
+  .menu ul {
+    display: none;
+  }
+
+  .menu li:hover > ul {
+    border: 1px solid lighten($base-color, 7%);
+    display: block;
+  }
+
+  .region-menu .menu li ul {
+    background: $black;
+		position: absolute;
+		top: 2em;
+		left: 0;
+		width: 12em;
+    li {
+      border-right: none;
+      display: inline-block;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      a {
+        display: block;
+      }
+    }
+	}
+
+} //end media query
+
 
 .sidebars .menu li {
   border-bottom: 1px solid lighten($gray, 15%);

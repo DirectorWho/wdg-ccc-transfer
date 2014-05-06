@@ -42,11 +42,24 @@
       </div>
     </div><!-- end of branding wrapper -->
       <div class="menu-wrapper">
-        <div class="region region-menu">
+        <navigation class="region region-menu">
+          <a href="#menu" class="menu-link">Menu</a>
             <ul id="main-menu" class="menu main-menu">
               <li class="active-trail first odd"><a href="index.html" class="active">Home</a></li>
-              <li class="even"><a href="#">Resources</a></li>
-              <li class="odd"><a href="#">CCC Links</a></li>
+              <li class="even menuparent"><a href="#">Resources</a>
+                <ul>
+                  <li><a href="#">Associations</a></li>
+                  <li><a href="#">Best Practices</a></li>
+                  <li><a href="#">Conferences and Materials</a></li>
+                </ul>
+              </li>
+              <li class="odd"><a href="#">CCC Links</a>
+                <ul>
+                  <li><a href="#">CCC Student Service Program Links</a></li>
+                  <li><a href="#">CCC GE, CSU Breadth, and IGETC Patterns Links</a></li>
+                  <li><a href="#">CCC Transcript Legends &amp; Transcript Request Links</a></li>
+                </ul>
+              </li>
               <li class="even"><a href="#">CSU Links</a></li>
               <li class="odd"><a href="#">UC Links</a></li>
               <li class="even"><a href="#">AICCU Links</a></li>
@@ -54,7 +67,7 @@
               <li class="even"><a href="#">IGETC</a></li>
               <li class="last odd"><a href="#">ASSIST</a></li>
             </ul>
-        </div>
+        </navigation>
       </div> <!-- end of menu -->
     </header>
   </div> <!-- end of header wrapper -->
@@ -72,7 +85,7 @@
         <div id="block-system-main" class="block block-system">
         <div class="view view-name view-id-name">
           <div class="first odd">
-            <h2><a href="/blog/view-sample-styles">View Item Title</a></h2>
+            <h2><a href="#">View Item Title</a></h2>
             <p>This page has some sample styles you can preview. Bene cogo cui gemino incassum lucidus quia tego vulputate. Augue eros gravis metuo. Dignissim iriure nisl paratus. Abluo iaceo imputo natu patria populus typicus vel. Abdo aliquam consectetuer decet fere jugis venio voco. Aliquam obruo persto quis saepius vicis ymo. Abbas distineo gemino hos iusto... <a href="/" class="views-more-link"> Full Article</a>
             </p>
           </div>
@@ -138,15 +151,17 @@
   </div> <!-- end of content wrapper -->
     <footer>
       <div class="region-footer">
-        <ul id="footer-menu" class="menu footer-menu">
-          <li class="active-trail first odd"><a href="index.html" class="active">Home</a></li>
-          <li class="even"><a href="#">About Us</a></li>
-          <li class="odd"><a href="#">Technical Tips</a></li>
-          <li class="even"><a href="#">Contact Us</a></li>
-          <li class="odd"><a href="#">Site Map</a></li>
-          <li class="even"><a href="#">Knowledge Base FAQs</a></li>
-          <li class="last odd"><a href="#">TCW Campus Trainers</a></li>
-        </ul>
+        <navigation>
+          <ul id="footer-menu" class="menu footer-menu">
+            <li class="active-trail first odd"><a href="index.html" class="active">Home</a></li>
+            <li class="even"><a href="#">About Us</a></li>
+            <li class="odd"><a href="#">Technical Tips</a></li>
+            <li class="even"><a href="#">Contact Us</a></li>
+            <li class="odd"><a href="#">Site Map</a></li>
+            <li class="even"><a href="#">Knowledge Base FAQs</a></li>
+            <li class="last odd"><a href="#">TCW Campus Trainers</a></li>
+          </ul>
+        </navigation>
         <div id="block-block-3" class="block block-block">
           <h4>Disclaimer</h4>
           <p class="disclaimer-left"> The Transfer Counselor Website (TCW) is a one-stop repository of resources and tools for California's community college counselors. This website is NOT designed to be used by students or parents.
@@ -156,6 +171,7 @@ The TCW does not take the place of a counselor on your campus. It is intended to
       </div>
     </footer>
   </div> <!-- end of page div -->
-
+<script src="js/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>
