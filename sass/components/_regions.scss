@@ -20,9 +20,9 @@ img.header__logo-image {
  }
 
  .branding-wrapper {
- clear: both;
- overflow: hidden;
- padding: 1rem 0;
+   clear: both;
+   overflow: hidden;
+   padding-top: 1em;
 }
 
 .region-branding {
@@ -31,12 +31,8 @@ img.header__logo-image {
 
 @media all and (min-width: $tab) {
 
-  .menu-wrapper {
-    background: $black;
-    height: 2.75em;
-    ul {
-      line-height: 1;
-    }
+  .branding-wrapper {
+    padding: 1em 0;
   }
 
 }
@@ -92,7 +88,6 @@ footer {
   background: $black;
   clear: both;
   overflow: hidden;
-  padding: 1rem;
   p,
   li,
   h4 {
@@ -100,7 +95,7 @@ footer {
   }
   p {
     font-size: $base-font-size * .75;
-    margin-bottom: .5rem;
+    margin-bottom: 0;
   }
 }
 
@@ -109,11 +104,20 @@ footer {
 }
 
 .copyright {
-  padding-bottom: 10px;
+  clear: both;
+  overflow: hidden;
+  padding-bottom: $vert-spacing;
   p {
     float: left;
     font-size: $base-font-size * .625;
   }
+}
+
+// disclaimer blockquote
+#block-block-3 {
+  clear: both;
+  margin-bottom: $vert-spacing;
+  overflow: hidden;
 }
 
 @media all and (min-width: $tab) {
@@ -121,7 +125,6 @@ footer {
   .disclaimer-left,
   .disclaimer-right {
     float: left;
-    margin-bottom: $vert-spacing;
     width: 50%;
   }
 

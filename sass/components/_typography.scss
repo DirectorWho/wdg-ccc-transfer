@@ -56,7 +56,8 @@ h6, h6 a {
   body {
     font-size: $base-font-size * .925;
     &.two-sidebars {
-
+      font-size: $base-font-size * .825;
+      
       h2, h2 a {
         font-size: $h2-font-size * .925;
       }

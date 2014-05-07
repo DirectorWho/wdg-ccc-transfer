@@ -10,7 +10,12 @@
 .block-search {
   clear: both;
   overflow: hidden;
+  padding: 1em 0;
   width: 100%;
+  .form-item {
+    margin-bottom: 0;
+    input {margin-bottom: 0;}
+  }
 }
 
 @media all and (min-width: $tab) {
@@ -28,6 +33,7 @@
 @media all and (min-width: $desk) {
 
     .block-search {
+      padding: 0;
       width: 20%;
     }
 
