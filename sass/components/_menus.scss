@@ -19,6 +19,14 @@ li a.active:hover  {
   color: lighten($accent, 15%);
 }
 
+.menu-wrapper {
+  background: $black;
+  height: 2.75em;
+  ul {
+    line-height: 1;
+  }
+}
+
 .region-menu .menu,
 .footer-menu.menu {
   background: $black;
@@ -28,7 +36,7 @@ li a.active:hover  {
   margin-top: .475em;
 }
 
-.region-menu .menu {
+.js .region-menu .menu {
   max-height: 0;
   overflow: hidden;
   &.active {
@@ -124,9 +132,13 @@ a.menu-link {
 .region-menu .menu li ul {
   background: lighten($black, 30%);
   margin: .5em -20px -1em -100px;
-  max-height: 0;
   padding-left: 80px;
   padding-right: 150px;
+  max-height: 50em;
+}
+
+.js .region-menu .menu li ul {
+  max-height: 0;
   overflow: hidden;
   &.active {
     max-height: 50em;
@@ -134,13 +146,37 @@ a.menu-link {
   }
 }
 
+.footer-menu.menu {
+  margin-top: 0;
+  width: 100%;
+  li {
+    border-bottom: 1px solid lighten($black, 30%);
+    display: block;
+    padding: .75em 30px;
+    margin-right: -30px;
+    margin-left: -30px;
+  }
+  &.first {
+    //border-top: none;
+  }
+}
+
 
 @media all and (min-width: $desk) {
 
-  .region-menu .menu,
-  .region-menu .menu li ul {
+  .js .region-menu .menu,
+  .js .region-menu .menu li ul {
     max-height: none;
     overflow: visible;
+  }
+
+  .footer-menu.menu {
+    margin-top: .75em;
+    li {
+      border-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 
   .region-menu .menu li.menuparent > a:after {
