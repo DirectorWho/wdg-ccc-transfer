@@ -43,10 +43,11 @@ li a.active:hover  {
 // multi-toggle styles
 
 a.menu-link {
+  background: url('../images/menu-icon.svg') no-repeat scroll 20px 1.05em transparent;
   color: $white;
   display: block;
   float: left;
-  padding: .675em 0 0 20px;
+  padding: .675em 0 0 45px;
 }
 
 .region-menu .menu {
